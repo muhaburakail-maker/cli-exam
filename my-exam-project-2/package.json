@@ -1,0 +1,32 @@
+{
+  "name": "my-exam-project-2",
+  "version": "1.0.0",
+  "description": "MyExam project using rwanda-exam template with mongodb database",
+  "main": "backend/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "concurrently \"npm run build:frontend\" \"npm run build:backend\"",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "echo \"Backend is ready for production\"",
+    "start": "node backend/dist/index.js",
+    "test": "jest",
+    "test:frontend": "cd frontend && npm run test",
+    "test:backend": "cd backend && npm run test",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "keywords": [
+    "exam",
+    "education",
+    "myexam",
+    "rwanda-exam",
+    "mongodb"
+  ],
+  "author": "MyExam",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
