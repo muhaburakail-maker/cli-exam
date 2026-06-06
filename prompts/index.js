@@ -143,7 +143,7 @@ async function promptDatabaseCredentials(database) {
     {
       type: 'input',
       name: 'port',
-      message: chalk.cyan(`Database port:`),
+      message: chalk.cyan('Database port:'),
       default: database === 'mongodb' ? '27017' : '3306',
       validate: (input) => {
         if (!/^\d+$/.test(input)) return 'Port must be a number';
@@ -288,7 +288,7 @@ async function promptConfirmCreation(config) {
 /**
  * Prompt for environment variables
  */
-async function promptEnvironmentVariables(template) {
+async function promptEnvironmentVariables(_template) {
   const defaults = {
     port: '5000',
     clientPort: '3000',

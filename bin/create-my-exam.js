@@ -9,7 +9,6 @@
 
 const { program } = require('commander');
 const chalk = require('chalk');
-const path = require('path');
 const { version } = require('../package.json');
 const { showBanner, handleError } = require('../utils/helpers');
 const initializeWizard = require('../commands/initialize');
@@ -33,7 +32,7 @@ program
   .option('-f, --force', 'Overwrite existing directory')
   .option('--skip-install', 'Skip npm install')
   .option('--skip-git', 'Skip git initialization')
-  .action((projectDir, options, command) => {
+  .action((projectDir, options) => {
     if (projectDir && typeof projectDir === 'object' && !Array.isArray(projectDir)) {
       options = projectDir;
       projectDir = undefined;
@@ -42,8 +41,8 @@ program
     (async () => {
       try {
         await initializeWizard(projectDir, options);
-      } catch (error) {
-        handleError(error);
+      } catch (err) {
+        handleError(err);
         process.exit(1);
       }
     })();

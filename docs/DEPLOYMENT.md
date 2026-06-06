@@ -85,7 +85,7 @@ git push heroku main
 
 4. **View logs**
 ```bash
-heroku logs --tail
+heroku create cli-exam
 ```
 
 ### Option 2: AWS Deployment
@@ -429,3 +429,5 @@ For deployment issues:
 ---
 
 Happy deploying! 🚀
+
+

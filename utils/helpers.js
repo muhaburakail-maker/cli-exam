@@ -6,7 +6,6 @@
 
 const chalk = require('chalk');
 const fs = require('fs-extra');
-const path = require('path');
 
 /**
  * Display CLI banner
@@ -162,7 +161,7 @@ async function writeJSON(filePath, data, pretty = true) {
  */
 function deepMerge(target, source) {
   for (const key in source) {
-    if (source.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(source, key)) {
       if (
         typeof source[key] === 'object' &&
         source[key] !== null &&

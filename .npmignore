@@ -1,0 +1,17 @@
+# Don't include these in npm package
+.git
+.gitignore
+.npmignore
+.env
+.env.example
+node_modules/
+docs/
+tests/
+examples/
+*.log
+.DS_Store
+DEPLOYMENT.md
+NPM_PUBLISHING.md
+my-exam-project/
+my-exam-project-2/
+xavier/

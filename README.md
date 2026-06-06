@@ -1,6 +1,6 @@
-# MyExam - Production-Ready Framework
+# create-my-exam - Production-Ready CLI Framework
 
-Build complete applications in seconds with MyExam's powerful CLI tool.
+Build complete applications in seconds with create-my-exam's powerful CLI tool.
 
 ## Features
 
@@ -25,7 +25,7 @@ npx create-my-exam@latest
 
 ## Templates
 
-MyExam provides multiple production-ready templates:
+create-my-exam provides multiple production-ready templates:
 
 - **Rwanda National Exam Practice** - Complete exam platform with analytics
 - **CBT Examination System** - Computer-based testing platform
@@ -135,7 +135,7 @@ npm run build
 ### Run Tests
 
 ```bash
-npm run test
+npm test
 ```
 
 ## Configuration
@@ -209,23 +209,14 @@ npx create-my-exam@latest my-project --force
 # Run full development environment
 npm run dev
 
-# Run only frontend
-npm run dev:frontend
-
-# Run only backend
-npm run dev:backend
-
-# Build all
-npm run build
-
-# Run tests
-npm run test
-
 # Lint code
 npm run lint
 
 # Format code
 npm run format
+
+# Run tests
+npm test
 ```
 
 ## Troubleshooting
@@ -279,7 +270,7 @@ For help and support:
 1. Check documentation in `docs/` folder
 2. Review template README files
 3. Open an issue on GitHub
-4. Contact: support@myexam.dev
+4. Contact: muhaburakail@gmail.com
 
 ## Roadmap
 
@@ -308,6 +299,6 @@ Inspired by:
 
 ---
 
-Made with ❤️ by MyExam Team
+Made with ❤️ by create-my-exam Team
 
 **Happy coding! 🚀**

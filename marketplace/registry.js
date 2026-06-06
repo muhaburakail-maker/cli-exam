@@ -4,8 +4,7 @@
  * Manages available templates, their metadata, and sources
  */
 
-const axios = require('axios');
-const { readJSON, writeJSON, info, success, error } = require('../utils/helpers');
+const { writeJSON, success } = require('../utils/helpers');
 
 /**
  * Template Marketplace Registry
@@ -19,7 +18,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Complete platform for Rwanda national exam practice and management',
       version: '1.0.0',
       category: 'education',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Exam Practice', 'Analytics', 'User Management', 'Reports'],
       tags: ['exam', 'education', 'rwanda'],
     },
@@ -29,7 +28,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Computer-Based Testing platform for online examinations',
       version: '1.0.0',
       category: 'education',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Online Tests', 'Timer', 'Analytics', 'Randomization'],
       tags: ['exam', 'cbt', 'online-testing'],
     },
@@ -39,7 +38,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Complete school administration and management system',
       version: '1.0.0',
       category: 'education',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Student Management', 'Grades', 'Attendance', 'Staff Portal'],
       tags: ['school', 'management', 'education'],
     },
@@ -49,7 +48,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Full-featured e-commerce platform with payments and inventory',
       version: '1.0.0',
       category: 'commerce',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Product Catalog', 'Shopping Cart', 'Payments', 'Orders'],
       tags: ['ecommerce', 'shopping', 'store'],
     },
@@ -59,7 +58,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Investment management and portfolio tracking platform',
       version: '1.0.0',
       category: 'finance',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Portfolio Tracking', 'Analytics', 'Transactions', 'Reports'],
       tags: ['investment', 'finance', 'portfolio'],
     },
@@ -69,7 +68,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Delivery and order management platform',
       version: '1.0.0',
       category: 'delivery',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Order Management', 'Tracking', 'Driver Management', 'Payments'],
       tags: ['delivery', 'orders', 'logistics'],
     },
@@ -79,7 +78,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Complete hotel management and booking system',
       version: '1.0.0',
       category: 'hospitality',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Reservations', 'Room Management', 'Billing', 'Guest Management'],
       tags: ['hotel', 'hospitality', 'booking'],
     },
@@ -89,7 +88,7 @@ const TEMPLATES_REGISTRY = {
       description: 'Hospital and healthcare management system',
       version: '1.0.0',
       category: 'healthcare',
-      github: 'francoisxaviernzaba/exam-template',
+      github: 'muhaburakail-maker/cli-exam',
       features: ['Patient Management', 'Appointments', 'Medical Records', 'Billing'],
       tags: ['hospital', 'healthcare', 'medical'],
     },

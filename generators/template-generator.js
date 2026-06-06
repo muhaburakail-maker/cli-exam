@@ -566,16 +566,9 @@ NODE_ENV=development
 APP_PORT=5000
 CLIENT_URL=http://localhost:3000
 
-${database === 'mongodb' 
-  ? `DB_TYPE=mongodb
-DB_HOST=localhost
-DB_PORT=27017
-MONGO_URI=mongodb://localhost:27017/my-exam` 
-  : `DB_TYPE=mysql
-DB_HOST=localhost
-DB_USERNAME=root
-DB_PASSWORD=
-DB_NAME=my_exam`}
+  ${database === 'mongodb'
+    ? 'DB_TYPE=mongodb\nDB_HOST=localhost\nDB_PORT=27017\nMONGO_URI=mongodb://localhost:27017/my-exam'
+    : 'DB_TYPE=mysql\nDB_HOST=localhost\nDB_USERNAME=root\nDB_PASSWORD=\nDB_NAME=my_exam'}
 
 JWT_SECRET=your-secret-key
 \`\`\`
@@ -583,15 +576,8 @@ JWT_SECRET=your-secret-key
 ### 3. Start Database
 
 ${database === 'mongodb'
-  ? `\`\`\`bash
-mongod
-\`\`\``
-  : `\`\`\`bash
-# Start MySQL server
-mysql -u root -p
-# Create database
-CREATE DATABASE my_exam;
-\`\`\``}
+    ? '```bash\nmongod\n```'
+    : '```bash\n# Start MySQL server\nmysql -u root -p\n# Create database\nCREATE DATABASE my_exam;\n```'}
 
 ### 4. Start Development Servers
 

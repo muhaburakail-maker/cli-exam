@@ -386,7 +386,7 @@ Built with inspiration from:
 1. Check TROUBLESHOOTING.md
 2. Review documentation in docs/
 3. Create GitHub issue
-4. Email: support@myexam.dev
+4. Email: muhaburakail@gmail.com
 
 ### Contributing
 1. Follow CONTRIBUTING.md

@@ -8,7 +8,7 @@ const { exec } = require('child_process');
 const ora = require('ora');
 const path = require('path');
 const fs = require('fs-extra');
-const { success, error, info, warn } = require('../utils/helpers');
+const { success } = require('../utils/helpers');
 
 /**
  * Check if npm or yarn is installed
@@ -34,7 +34,7 @@ function installDependencies(workingDir, packageManager = 'npm', verbose = false
       stdio: verbose ? 'inherit' : 'pipe',
     };
 
-    exec(command, options, (err, stdout, stderr) => {
+    exec(command, options, (err, _stdout, _stderr) => {
       if (err) {
         spinner.fail('Failed to install dependencies');
         reject(new Error(`npm install failed: ${err.message}`));
@@ -187,24 +187,16 @@ async function installAllDependencies(projectPath, packageManager = 'npm', verbo
   const frontendPath = path.join(projectPath, 'frontend');
   const backendPath = path.join(projectPath, 'backend');
 
-  try {
-    // Install frontend dependencies
-    if (await fs.pathExists(path.join(frontendPath, 'package.json'))) {
-      info('Installing frontend dependencies...');
-      await installDependencies(frontendPath, packageManager, verbose);
-    }
-
-    // Install backend dependencies
-    if (await fs.pathExists(path.join(backendPath, 'package.json'))) {
-      info('Installing backend dependencies...');
-      await installDependencies(backendPath, packageManager, verbose);
-    }
-
-    success('All dependencies installed successfully');
-    return true;
-  } catch (err) {
-    throw err;
+  if (await fs.pathExists(path.join(frontendPath, 'package.json'))) {
+    await installDependencies(frontendPath, packageManager, verbose);
   }
+
+  if (await fs.pathExists(path.join(backendPath, 'package.json'))) {
+    await installDependencies(backendPath, packageManager, verbose);
+  }
+
+  success('All dependencies installed successfully');
+  return true;
 }
 
 /**

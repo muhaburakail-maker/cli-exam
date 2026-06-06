@@ -24,7 +24,7 @@ async function runNpmInstall(workingDir, verbose = false) {
       maxBuffer: 10 * 1024 * 1024, // 10MB buffer
     };
 
-    const child = exec(command, options, (err, stdout, stderr) => {
+    const child = exec(command, options, (err, _stdout, _stderr) => {
       if (err) {
         spinner.fail('npm install failed');
         reject(new Error(`npm install error: ${err.message}`));
@@ -51,7 +51,7 @@ async function runNpmInstall(workingDir, verbose = false) {
  */
 async function runDevServer(workingDir, command = 'npm run dev', port = null) {
   return new Promise((resolve, reject) => {
-    const spinner = ora(`Starting development server...`).start();
+    const spinner = ora('Starting development server...').start();
 
     const finalCommand = port ? command.replace('dev', `dev -- --port ${port}`) : command;
 

@@ -34,7 +34,7 @@ We love your input! We want to make contributing to MyExam as easy and transpare
 
 ### Clone Repository
 ```bash
-git clone https://github.com/francoisxaviernzaba/exam-template.git
+git clone https://github.com/muhaburakail-maker/cli-exam.git
 cd create-my-exam
 npm install
 ```
@@ -249,7 +249,7 @@ By contributing, you agree that your contributions will be licensed under the sa
 - Open an issue with "question" label
 - Check existing documentation
 - Ask in discussions
-- Email: support@myexam.dev
+- Email: muhaburakail@gmail.com
 
 ## Code of Conduct
 

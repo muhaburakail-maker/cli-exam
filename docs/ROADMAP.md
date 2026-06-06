@@ -304,10 +304,10 @@ Interested in contributing?
 
 ## Related Resources
 
-- [GitHub Repository](https://github.com/francoisxaviernzaba/exam-template)
-- [Documentation](https://myexam.dev/docs)
-- [Discord Community](https://discord.gg/myexam)
-- [Blog](https://myexam.dev/blog)
+- [GitHub Repository](https://github.com/muhaburakail-maker/cli-exam)
+- [Documentation](../README.md)
+- [Discord Community](https://discord.gg/cli-exam)
+- [Blog](https://github.com/muhaburakail-maker/cli-exam)
 
 ## Feedback
 
@@ -315,8 +315,8 @@ Have suggestions?
 
 1. Open a GitHub discussion
 2. Join Discord community
-3. Email: roadmap@myexam.dev
-4. Tweet: @myexamdev
+3. Email: muhaburakail@gmail.com
+4. Tweet: @muhaburakail-maker
 
 ---
 

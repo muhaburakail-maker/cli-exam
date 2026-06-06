@@ -7,7 +7,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
-const { success, warn, info } = require('../utils/helpers');
+const { success, warn } = require('../utils/helpers');
 
 /**
  * Create backup of existing project

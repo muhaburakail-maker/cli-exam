@@ -18,22 +18,22 @@ Ensure package.json is properly configured:
 {
   "name": "create-my-exam",
   "version": "1.0.0",
-  "description": "Create production-ready applications instantly",
+  "description": "Production-ready framework for creating complete applications with templates, database selection, and modern tech stack",
   "main": "index.js",
   "bin": {
     "create-my-exam": "bin/create-my-exam.js"
   },
   "keywords": ["cli", "scaffold", "generator"],
-  "author": "Your Name",
+  "author": "muhaburakail <muhaburakail@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/francoisxaviernzaba/exam-template"
+    "url": "https://github.com/muhaburakail-maker/cli-exam"
   },
   "bugs": {
-    "url": "https://github.com/francoisxaviernzaba/exam-template/issues"
+    "url": "https://github.com/muhaburakail-maker/cli-exam/issues"
   },
-  "homepage": "https://github.com/francoisxaviernzaba/exam-template#readme"
+  "homepage": "https://github.com/muhaburakail-maker/cli-exam#readme"
 }
 ```
 

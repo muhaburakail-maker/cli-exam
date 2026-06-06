@@ -6,7 +6,7 @@
 
 const fs = require('fs-extra');
 const path = require('path');
-const { success, info, warn } = require('../utils/helpers');
+const { success, warn } = require('../utils/helpers');
 
 /**
  * Get database configuration template
@@ -145,7 +145,7 @@ async function generateEnvExample(projectPath, database, credentials, env = {}) 
     await fs.ensureDir(backendPath);
     await fs.writeFile(envFile, envContent);
 
-    success(`Created .env.example file`);
+    success('Created .env.example file');
   } catch (err) {
     throw new Error(`Failed to generate .env.example: ${err.message}`);
   }
@@ -163,7 +163,7 @@ async function createEnvFile(projectPath, database, credentials, env = {}) {
     await fs.ensureDir(backendPath);
     await fs.writeFile(envFile, envContent);
 
-    success(`Created .env file`);
+    success('Created .env file');
   } catch (err) {
     throw new Error(`Failed to create .env file: ${err.message}`);
   }
@@ -312,7 +312,7 @@ async function writeSchemaDocumentation(projectPath, database) {
     await fs.ensureDir(path.dirname(docsPath));
     await fs.writeFile(docsPath, schemaDoc);
 
-    success(`Created schema documentation`);
+    success('Created schema documentation');
   } catch (err) {
     warn(`Failed to create schema documentation: ${err.message}`);
   }

@@ -32,7 +32,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Testing
+# Temp files
+*.tmp
+*.temp
+.temp-template*
+
+# Test/experimental directories
+my-exam-project/
+my-exam-project-2/
+xavier/
+
+# Test outputs
 coverage/
 .nyc_output/
 
